@@ -1,0 +1,18 @@
+mat-sidenav-container {
+    border: 2px solid black;
+    width: 14rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+button {
+    width: 100px;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
