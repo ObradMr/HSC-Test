@@ -1,0 +1,8 @@
+
+table {
+    width: 85vw;
+}
+
+.mat-row:hover {
+    background-color: #f4f4f4;
+}

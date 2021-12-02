@@ -1,5 +1,6 @@
 export class User {
 
+    id: number
     firstName: string;
     lastName: string;
     userName: string;
@@ -9,7 +10,8 @@ export class User {
     salary: number;
 
     constructor(obj?: any) {
-        this.firstName = obj && obj,this.firstName || '';
+        this.id = obj && obj.id || null;
+        this.firstName = obj && obj.firstName || '';
         this.lastName = obj && obj.lastName || '';
         this.userName = obj && obj.userName || '';
         this.email = obj && obj.email || '';

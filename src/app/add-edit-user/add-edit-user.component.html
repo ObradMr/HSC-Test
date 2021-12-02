@@ -5,7 +5,9 @@
 
     <mat-card-content>
 
-        <form [formGroup]="userForm" class="form">
+        <form [formGroup]="userForm"  class="form" (ngSubmit)="onSubmit()">
+
+            <!-- <input type="hidden" formControlName='_id'> -->
 
             <mat-form-field appearance="outline">
                 <mat-label>First Name</mat-label>
@@ -19,7 +21,7 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Username</mat-label>
-                <input matInput type="text" placeholder="Username" formControlName='username'>
+                <input matInput type="text" placeholder="Username must be UNIQUE" formControlName='userName'>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -29,7 +31,7 @@
 
             <mat-form-field appearance="outline">
                 <mat-label>Phone</mat-label>
-                <input matInput type="number" placeholder="phone" formControlName='phone'>
+                <input matInput type="number" placeholder="064-22-33-444" formControlName='phone'>
             </mat-form-field>
 
             <mat-form-field appearance="outline">
@@ -42,7 +44,7 @@
                 <input matInput type="number" placeholder="salary" formControlName='salary'>
             </mat-form-field>
 
-            <button mat-raised-button color="primary" >Add / Save</button>
+            <button mat-raised-button color="primary" [disabled]="!userForm.valid" >Add / Save</button>
 
         </form>
 
